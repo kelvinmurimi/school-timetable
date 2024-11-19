@@ -1,0 +1,16 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+
+parameters:
+
+    paths:
+        - app/
+
+    # Level 9 is the highest level
+    level: 8
+
+    ignoreErrors:
+    - '#Cannot access property \$[a-zA-Z0-9\\_]+ on App\\Models\\User\|null#'
+    - '#Cannot call method [a-zA-Z0-9\\_]+\(\) on App\\Models\\User\|null#'
+
+    checkGenericClassInNonGenericObjectType: false
