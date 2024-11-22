@@ -19,7 +19,7 @@ Livewire::setUpdateRoute(function ($handle) {
 
 Route::get('/', WelcomeController::class);
 
-Route::prefix(config('admintw.prefix'))->middleware(['auth', 'verified', 'activeUser', 'ipCheckMiddleware'])->group(function () {
+Route::prefix(config('admintw.prefix'))->middleware(['auth', 'activeUser', 'ipCheckMiddleware'])->group(function () {
     Route::get('/', Dashboard::class)->name('dashboard');
 
     Route::get('2fa', [TwoFaController::class, 'index'])->name('admin.2fa');
@@ -41,4 +41,4 @@ Route::prefix(config('admintw.prefix'))->middleware(['auth', 'verified', 'active
     });
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

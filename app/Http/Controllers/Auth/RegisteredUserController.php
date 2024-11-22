@@ -40,7 +40,7 @@ class RegisteredUserController extends Controller
         $user->image = $this->generateImage($user);
         $user->save();
 
-        Role::create([
+        /* Role::create([
             'name' => 'admin',
             'label' => 'Admin',
         ]);
@@ -48,13 +48,13 @@ class RegisteredUserController extends Controller
         Role::create([
             'name' => 'user',
             'label' => 'User',
-        ]);
+        ]);*/
 
         $user->assignRole('admin');
 
         event(new Registered($user));
 
-        $user->sendEmailVerificationNotification();
+        //  $user->sendEmailVerificationNotification();
         flash('Please check your email for a verification link.')->info();
 
         return redirect()->back();
@@ -63,7 +63,7 @@ class RegisteredUserController extends Controller
     public function generateImage(User $user): string
     {
         $name = get_initials($user->name);
-        $id = $user->id.'.png';
+        $id = $user->id . '.png';
         $path = 'users/';
 
         return create_avatar($name, $id, $path);
