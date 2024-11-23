@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Room;
-use App\Http\Requests\StoreRoomRequest;
-use App\Http\Requests\UpdateRoomRequest;
+use App\Models\Subject;
+use App\Http\Requests\StoreSubjectRequest;
+use App\Http\Requests\UpdateSubjectRequest;
 
-class RoomController extends Controller
+class SubjectController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,11 +14,11 @@ class RoomController extends Controller
     public function index()
     {
         //
-        $rooms = Room::latest()->paginate(10);
+        $subjects = Subject::latest()->paginate(10);
         return view(
-            'admin.rooms.index',
+            'admin.subjects.index',
             [
-                'rooms' => $rooms
+                'subjects' => $subjects
             ]
         );
     }
@@ -34,7 +34,7 @@ class RoomController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreRoomRequest $request)
+    public function store(StoreSubjectRequest $request)
     {
         //
     }
@@ -42,7 +42,7 @@ class RoomController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Room $room)
+    public function show(Subject $subject)
     {
         //
     }
@@ -50,7 +50,7 @@ class RoomController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Room $room)
+    public function edit(Subject $subject)
     {
         //
     }
@@ -58,7 +58,7 @@ class RoomController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateRoomRequest $request, Room $room)
+    public function update(UpdateSubjectRequest $request, Subject $subject)
     {
         //
     }
@@ -66,7 +66,7 @@ class RoomController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Room $room)
+    public function destroy(Subject $subject)
     {
         //
     }

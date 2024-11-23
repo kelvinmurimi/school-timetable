@@ -58,7 +58,7 @@
 
     <div class="flex justify-between text-sm px-4 py-2 bg-white dark:bg-gray-700 border-t dark:border-gray-500">
         <p>{{ __('Copyright') }} &copy; {{ date('Y') }} {{ config('app.name') }}</p>
-        <p>{{ __('Built by') }} <a href="https://dcblog.dev">David Carr</a></p>
+        <p>{{ __('Built by') }} <a href="https://dcblog.dev">Dantechdevs developers</a></p>
     </div>
 
     </body>
