@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ $title ?? null }} - {{ config('app.name', 'Laravel') }}</title>
+    <title>{{ $title ?? null }} - {{ config('app.name', 'Timetable') }}</title>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <script defer src="https://unpkg.com/@alpinejs/ui@3.13.2-beta.0/dist/cdn.min.js"></script>
     </head>

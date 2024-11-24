@@ -38,4 +38,5 @@
 @endcan
 @can('view_users')
     <x-nav.link route="admin.rooms.index" icon="fas fa-users">Rooms</x-nav.link>
+    <x-nav.link route="admin.subjects.index" icon="fas fa-users">Subjects</x-nav.link>
 @endcan

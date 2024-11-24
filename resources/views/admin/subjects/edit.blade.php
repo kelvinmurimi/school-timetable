@@ -1,3 +1,5 @@
+@extends('admin.layouts.master')
+@section('content')
 <div>
     <div class="flex justify-between">
         <h1>{{ __('Subjects') }}</h1>
@@ -105,3 +107,5 @@
         {{ $this->subjects()->links() }}
     </div>
 </div>
+
+@endsection
