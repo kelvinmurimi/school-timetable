@@ -14,6 +14,10 @@ class TimetableController extends Controller
     public function index()
     {
         //
+        $timetables=Timetable::
+        return view('admin.timetables.index',[
+            'timetables'=>$timetables
+        ]);
     }
 
     /**

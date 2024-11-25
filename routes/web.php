@@ -44,3 +44,4 @@ Route::prefix(config('admintw.prefix'))->middleware(['auth', 'activeUser', 'ipCh
 });
 
 require __DIR__ . '/auth.php';
+require __DIR__ . '/timetable.php';
