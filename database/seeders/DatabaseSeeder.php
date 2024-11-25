@@ -13,6 +13,10 @@ class DatabaseSeeder extends Seeder
             RolesDatabaseSeeder::class,
             SettingsDatabaseSeeder::class,
             UserDatabaseSeeder::class,
+            RoomSeeder::class,
+            SubjectSeeder::class,
+            TeacherSeeder::class,
+            TimetableSeeder::class,
         ]);
     }
 }
