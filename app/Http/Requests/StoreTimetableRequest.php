@@ -11,7 +11,7 @@ class StoreTimetableRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,6 +23,11 @@ class StoreTimetableRequest extends FormRequest
     {
         return [
             //
+            'subject_id'=>['required'],
+            'teacher_id'=>['required'],
+             'day'=>['required'],
+             'time'=>['required'],
+             'room_id'=>['required'],
         ];
     }
 }
