@@ -39,3 +39,19 @@
 @can('view_users')
     <x-nav.link route="admin.rooms.index" icon="fas fa-users">Rooms</x-nav.link>
 @endcan
+
+@if(can('view_system_settings') || can('view_roles') || can('view_audit_trails') || can('view_sent_emails'))
+    <x-nav.group label="Timetable" route="admin.timetable.index" icon="fas fa-cogs">
+        @can('view_audit_trails')
+            <x-nav.group-item route="admin.timetable.index" icon="far fa-circle">All</x-nav.group-item>
+        @endcan
+
+        @can('view_roles')
+            <x-nav.group-item route="admin.settings.roles.index" icon="far fa-circle">Monday</x-nav.group-item>
+        @endcan
+
+        @can('view_system_settings')
+            <x-nav.group-item route="admin.settings" icon="far fa-circle">Wednesday</x-nav.group-item>
+        @endcan
+    </x-nav.group>
+@endif
