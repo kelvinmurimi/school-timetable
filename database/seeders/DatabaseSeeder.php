@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
             RolesDatabaseSeeder::class,
             SettingsDatabaseSeeder::class,
             UserDatabaseSeeder::class,
-            SubjectSeeder::class,
+
         ]);
     }
 }

@@ -4,14 +4,14 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreTeacherRequest extends FormRequest
+class StoreTimetableRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
      */
     public function authorize(): bool
     {
-
+        return true;
     }
 
     /**
@@ -23,7 +23,11 @@ class StoreTeacherRequest extends FormRequest
     {
         return [
             //
-
+            'subject_id'=>['required'],
+            'teacher_id'=>['required'],
+             'day'=>['required'],
+             'time'=>['required'],
+             'room_id'=>['required'],
         ];
     }
 }

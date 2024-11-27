@@ -19,4 +19,9 @@ class Subject extends Model
         'subject_code',
         'subject_teacher', // Assuming you meant 'subject_teacher' instead of 'subject_de'
     ];
+     // Subject has many Timetables
+     public function timetables()
+     {
+         return $this->hasMany(Timetable::class);
+     }
 }
