@@ -9,6 +9,7 @@ Route::prefix('subjects')->group(function () {
     Route::get('/create', [SubjectController::class, 'create'])->name('admin.subjects.create');
     Route::post('/store', [SubjectController::class, 'store'])->name('admin.subjects.store');
     Route::get('{id}/edit', [SubjectController::class, 'edit'])->name('admin.subjects.edit');
+    Route::get('{id}/show', [SubjectController::class, 'show'])->name('admin.subjects.show');
     Route::put('{id}/update', [SubjectController::class, 'update'])->name('admin.subjects.update');
     Route::delete('{id}/delete', [SubjectController::class, 'destroy'])->name('admin.subjects.destroy');
 });
