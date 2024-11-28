@@ -11,7 +11,7 @@ class UpdateTeacherRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+
     }
 
     /**
@@ -23,6 +23,7 @@ class UpdateTeacherRequest extends FormRequest
     {
         return [
             //
+
         ];
     }
 }

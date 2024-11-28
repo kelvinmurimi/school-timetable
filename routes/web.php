@@ -41,6 +41,8 @@ Route::prefix(config('admintw.prefix'))->middleware(['auth', 'activeUser', 'ipCh
     });
     require __DIR__ . '/rooms.php';
     require __DIR__ . '/subjects.php';
+    require __DIR__ . '/timetable.php';
 });
 
 require __DIR__ . '/auth.php';
+
