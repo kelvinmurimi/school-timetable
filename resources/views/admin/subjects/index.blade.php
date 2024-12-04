@@ -37,6 +37,9 @@
                 @endforeach
             </tbody>
         </table>
+        <div class="bg-gray-200 dark:bg-gray-700 rounded-b-md p-5">
+            {{ $subjects->links() }}
+         </div>
     </div>
 </div>
 
