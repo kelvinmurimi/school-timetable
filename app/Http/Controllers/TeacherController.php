@@ -14,6 +14,13 @@ class TeacherController extends Controller
     public function index()
     {
         //
+        $teachers = Teacher::latest()->paginate(10);
+        return view(
+            'admin.teachers.index',
+            [
+                'teachers' => $teachers
+            ]
+        );
     }
 
     /**

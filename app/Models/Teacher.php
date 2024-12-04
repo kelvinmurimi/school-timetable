@@ -9,7 +9,7 @@ class Teacher extends Model
 {
     /** @use HasFactory<\Database\Factories\TeacherFactory> */
     use HasFactory;
-  protected $fillable=['firstName','lastName','Email','phone'];
+  protected $fillable=['firstName','lastName','email','phone'];
       // Teacher has many Timetables
       public function timetables()
       {
