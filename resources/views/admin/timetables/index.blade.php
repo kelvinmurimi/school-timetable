@@ -3,8 +3,20 @@
 @section('content')
 
 <div class="container mx-auto px-4 py-8">
-    <h1 class="text-3xl font-semibold text-gray-800 mb-6">Timetable</h1>
 
+     <div class="bg-gray-100">
+        <nav  class="p-6 bg-white flex justify-between">
+           <ul class="flex items-center">
+            <h1 class="text-3xl font-semibold text-gray-800 mb-6">Timetable</h1>
+           </ul>
+           <ul class="flex items-center">
+            <a href="
+            {{ route('admin.timetable.create') }}" class="bg-blue-500 text-white px-4 py-2 rounded-md shadow-sm hover:bg-blue-600">Add Timetable</a>
+           </ul>
+        </nav>
+
+
+     </div>
     <!-- Make the table horizontally scrollable on smaller screens -->
     <div class="overflow-x-auto shadow-md rounded-lg bg-white">
         <table class="min-w-full table-auto">

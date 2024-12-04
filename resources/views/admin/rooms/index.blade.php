@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="container mx-auto px-4 py-8">
-    <h1 class="text-3xl font-semibold text-gray-800 mb-6">Subjects</h1>
+    <h1 class="text-3xl font-semibold text-gray-800 mb-6">Roooms</h1>
 
     <!-- Make the table horizontally scrollable on smaller screens -->
     <div class="overflow-x-auto shadow-md rounded-lg bg-white">
