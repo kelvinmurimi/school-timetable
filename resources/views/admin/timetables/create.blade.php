@@ -95,7 +95,7 @@
             <div>
                 <label for="day" class="block text-sm font-semibold text-gray-700 mb-2"
                     aria-label="Select the day">Room</label>
-                <select id="subject" name="teacher" required
+                <select id="subject" name="room" required
                     class="mt-2 block w-full px-4 py-2 text-sm border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
                     <option value="" disabled selected>Select Room</option>
                     @foreach($rooms as $room)

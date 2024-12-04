@@ -23,11 +23,11 @@ class UpdateTimetableRequest extends FormRequest
     {
         return [
             //
-            'subject_id'=>['required'],
-            'teacher_id'=>['required'],
+            'subject'=>['required'],
+            'teacher'=>['required'],
              'day'=>['required'],
              'time'=>['required'],
-             'room_id'=>['required'],
+             'room'=>['required'],
         ];
     }
 }
