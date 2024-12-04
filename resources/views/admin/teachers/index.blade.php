@@ -23,8 +23,8 @@
                 <!-- Example Row -->
                 <tr class="hover:bg-blue-50">
                     <td class="px-6 py-4 text-sm text-gray-700">{{ $teacher->id}}</td>
-                    <td class="px-6 py-4 text-sm text-gray-700">{{ $teacher->firstName }}</td>
-                    <td class="px-6 py-4 text-sm text-gray-700">{{ $teacher->lastName}}</td>
+                    <td class="px-6 py-4 text-sm text-gray-700">{{ $teacher->FirstName }}</td>
+                    <td class="px-6 py-4 text-sm text-gray-700">{{ $teacher->LastName}}</td>
                     <td class="px-6 py-4 text-sm text-gray-700">{{ $teacher->email }}</td>
                     <td class="px-6 py-4 text-sm text-gray-700">{{ $teacher->phone }}</td>
 
@@ -40,7 +40,7 @@
             </tbody>
         </table>
         <div class="bg-gray-200 dark:bg-gray-700 rounded-b-md p-5">
-            {{ $teachers>links() }}
+            {{ $teachers->links() }}
          </div>
     </div>
 </div>
