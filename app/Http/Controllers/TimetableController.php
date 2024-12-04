@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Timetable;
 use App\Http\Requests\StoreTimetableRequest;
 use App\Http\Requests\UpdateTimetableRequest;
+use App\Models\Teacher;
+use App\Models\Subject;
+use App\Models\Room;
 
 class TimetableController extends Controller
 {
@@ -14,9 +17,9 @@ class TimetableController extends Controller
     public function index()
     {
         //
-        $timetables = Timetable::with([ 'subject', 'teacher', 'room'])->paginate(5);
-        return view('admin.timetables.index',[
-            'timetables'=>$timetables
+        $timetables = Timetable::with(['subject', 'teacher', 'room'])->paginate(5);
+        return view('admin.timetables.index', [
+            'timetables' => $timetables
         ]);
     }
 
@@ -26,6 +29,18 @@ class TimetableController extends Controller
     public function create()
     {
         //
+        $title = 'create Timetable';
+        $teachers = Teacher::all();
+        $subjects = Subject::all();
+        $rooms = Room::all();
+        return view('admin.timetables.create', [
+            'title' => $title,
+            'rooms' => $rooms,
+            'subjects' => $subjects,
+            'teachers' => $teachers
+
+
+        ]);
     }
 
     /**
@@ -34,6 +49,15 @@ class TimetableController extends Controller
     public function store(StoreTimetableRequest $request)
     {
         //
+        $request->validated();
+        Timetable::create([
+            'subject_id' => $request->subject,
+            'teacher_id' => $request->teacher,
+            'day' => $request->day,
+            'time' => $request->time,
+            'room_id' => $request->room
+        ]);
+        return back()->with('success','success');
     }
 
     /**
