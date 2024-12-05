@@ -5,14 +5,14 @@
 
         <!-- Form Header -->
         <div class="bg-gray-100">
-            <nav class="p-6 bg-white flex justify-between">
+            <nav class="p-3 bg-white flex justify-between">
                 <ul class="flex items-center">
                     <h1 class="text-3xl font-semibold text-gray-800 mb-6">Create Timetable</h1>
                 </ul>
                 <ul class="flex items-center">
                     <a href="
             {{ route('admin.timetable.index') }}"
-                        class="bg-indigo-500 text-white px-4 py-2 rounded-md shadow-sm hover:bg-blue-600">Back</a>
+                        class="bg-indigo-500 text-white px-4 py-2 rounded-md shadow-sm hover:bg-blue-600">Back To Timetable</a>
                 </ul>
             </nav>
 

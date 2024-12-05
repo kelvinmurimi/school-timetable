@@ -49,7 +49,7 @@ class TimetableController extends Controller
     public function store(StoreTimetableRequest $request)
     {
         //
-        dd($request);
+        //dd($request);
         $request->validated();
         Timetable::create([
             'subject_id' => $request->subject,
