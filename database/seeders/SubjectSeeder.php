@@ -2,9 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\Subject;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Subject;
+
 class SubjectSeeder extends Seeder
 {
     /**
@@ -13,6 +14,7 @@ class SubjectSeeder extends Seeder
     public function run(): void
     {
         //
+
         Subject::create([
             'subject_name'=>'English',
             'subject_code'=>'101',
@@ -54,6 +56,15 @@ class SubjectSeeder extends Seeder
             'subject_teacher'=>'teacher 5',
             'created_at'=>now(),
             'updated_at'=>now(),
+        ]);
+
+        Subject::create([
+            'subject_name' => 'Mathematics',
+            'subject_code' => '101',
+            'subject_teacher' => 'Dr. John Doe',
+            'created_at' => now(),
+            'updated_at' => now(),
+
         ]);
     }
 }

@@ -1,3 +1,5 @@
+@extends('admin.layouts.master')
+@section('content')
 <div>
     <div class="flex justify-between">
         <h1>{{ __('Create Subject') }}</h1>
@@ -18,3 +20,6 @@
         </form>
     </div>
 </div>
+
+@endsection
+
