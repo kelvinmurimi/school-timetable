@@ -75,14 +75,34 @@ class TimetableController extends Controller
     public function edit(Timetable $timetable)
     {
         //
+        $title = 'Edit Timetable';
+        return view('admin.timetables.edit', [
+            'title' => $title,
+            'timetable'=>$timetable,
+            //'rooms' => $rooms,
+           // 'subjects' => $subjects,
+            //'teachers' => $teachers
+
+
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateTimetableRequest $request, Timetable $timetable)
+    public function update(UpdateTimetableRequest $request, $id)
     {
         //
+        $timetable=Timetable::findOrFail($id);
+        $request->validated();
+        $timetable->update([
+            'subject_id' => $request->subject,
+            'teacher_id' => $request->teacher,
+            'day' => $request->day,
+            'time' => $request->time,
+            'room_id' => $request->room
+        ]);
+        return back()->with('success','success');
     }
 
     /**

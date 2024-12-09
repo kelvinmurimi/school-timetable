@@ -29,6 +29,7 @@ class TeacherController extends Controller
     public function create()
     {
         //
+        
     }
 
     /**
