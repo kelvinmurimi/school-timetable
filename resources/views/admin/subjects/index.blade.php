@@ -1,5 +1,14 @@
 @extends('admin.layouts.master')
 @section('content')
+<<<<<<< HEAD
+
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-semibold text-gray-800 mb-6">Subjects</h1>
+
+    <!-- Make the table horizontally scrollable on smaller screens -->
+    <div class="overflow-x-auto shadow-md rounded-lg bg-white">
+        <table class="min-w-full table-auto">
+=======
 <div>
     <div class="flex justify-between">
         <h1>{{ __('Subjects') }}</h1>
@@ -50,14 +59,33 @@
 
         <div class="overflow-x-scroll">
             <table>
+>>>>>>> ebf51548c833597ef5cd4fb358f9fd2362aad261
             <thead>
-                <tr>
-                    <th><a href="#" wire:click="sortBy('name')">{{ __('Subject Name') }}</a></th>
-                    <th><a href="#" wire:click="sortBy('code')">{{ __('Subject Code') }}</a></th>
-                    <th>{{ __('Teacher') }}</th>
-                    <th>{{ __('Action') }}</th>
+                <tr class="bg-blue-100 text-gray-700">
+                    <th class="px-6 py-3 text-left text-sm font-medium uppercase">Subject Id</th>
+                    <th class="px-6 py-3 text-left text-sm font-medium uppercase">Subject Name</th>
+                    <th class="px-6 py-3 text-left text-sm font-medium uppercase">Teacher</th>
+                    <th class="px-6 py-3 text-left text-sm font-medium uppercase">Code</th>
+
+                    <th class="px-6 py-3 text-center text-sm font-medium uppercase">Actions</th>
                 </tr>
             </thead>
+<<<<<<< HEAD
+            <tbody class="divide-y divide-gray-200">
+                @foreach ($subjects as $subject)
+                <!-- Example Row -->
+                <tr class="hover:bg-blue-50">
+                    <td class="px-6 py-4 text-sm text-gray-700">{{ $subject->id }}</td>
+                    <td class="px-6 py-4 text-sm text-gray-700">{{ $subject->subject_name}}</td>
+                    <td class="px-6 py-4 text-sm text-gray-700">{{ $subject->subject_teacher}}</td>
+                    <td class="px-6 py-4 text-sm text-gray-700">{{  $subject->subject_code}}</td>
+
+                    <td class="px-6 py-4 text-center">
+                        <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded-md shadow-sm hover:bg-blue-600">Edit</a>
+                        <form action="#" method="POST" class="inline-block">
+                            <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded-md shadow-sm hover:bg-red-600">Delete</button>
+                        </form>
+=======
             <tbody>
             @foreach($subjects as $subject)
                 <tr wire:key="{{ $subject->id }}">
@@ -82,14 +110,20 @@
 
 
                         </div>
+>>>>>>> ebf51548c833597ef5cd4fb358f9fd2362aad261
                     </td>
                 </tr>
-            @endforeach
-            </tbody>
-            </table>
-        </div>
 
+<<<<<<< HEAD
+                @endforeach
+            </tbody>
+        </table>
+        <div class="bg-gray-200 dark:bg-gray-700 rounded-b-md p-5">
+            {{ $subjects->links() }}
+         </div>
+=======
         {{ $subjects->links() }}
+>>>>>>> ebf51548c833597ef5cd4fb358f9fd2362aad261
     </div>
 </div>
 

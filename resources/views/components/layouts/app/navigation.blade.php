@@ -37,12 +37,18 @@
     <x-nav.link route="admin.users.index" icon="fas fa-users">Users</x-nav.link>
 @endcan
 @can('view_users')
-    <x-nav.link route="admin.rooms.index" icon="fas fa-users">Rooms</x-nav.link>
-    <x-nav.link route="admin.subjects.index" icon="fas fa-users">Subjects</x-nav.link>
+    <x-nav.link route="admin.teachers.index" icon="fa fa-address-book">Teachers</x-nav.link>
+@endcan
+
+@can('view_users')
+    <x-nav.link route="admin.rooms.index" icon="fa fa-window-restore">Rooms</x-nav.link>
+@endcan
+@can('view_users')
+    <x-nav.link route="admin.subjects.index" icon="fa fa-book">Subjects</x-nav.link>
 @endcan
 
 @if(can('view_system_settings') || can('view_roles') || can('view_audit_trails') || can('view_sent_emails'))
-    <x-nav.group label="Timetable" route="admin.timetable.index" icon="fas fa-cogs">
+    <x-nav.group label="Timetable" route="admin.timetable.index" icon="fa fa-folder" aria-hidden="true"></i>">
         @can('view_audit_trails')
             <x-nav.group-item route="admin.timetable.index" icon="far fa-circle">All</x-nav.group-item>
         @endcan
